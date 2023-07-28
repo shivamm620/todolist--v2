@@ -1,38 +1,97 @@
-.App {
+body{
+  background-color: #17181f;
+  color: #aaa;
+}
+*{
+  box-sizing: border-box;
+}
+main{
+  max-width: 300px;
+  margin: 20px auto;
+}
+form{
+  border: 3px solid #303130;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+form input[type="text"]{
+  color:#aaa;
+  background: none;
+  width: 316px;
+  border: 0;
+  padding: 5px 8px;
+}
+
+form button{
+  background-color: #61daf9;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.task{
+  background-color:#303130 ;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top:5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: opacity .3s linear;
+}
+div.task svg{
+  height: 20px;
+  margin-right: 4px;
+  fill: #61daf9;
+}   
+
+div.task.done{
+  opacity: 0.3;
+  text-decoration: underline;
+}
+div.task span{
+  position: relative;
+  
+}
+div.Trash{
+  flex-grow: 1;
+}
+div.task span:before{
+  content: "";
+  display: flex;
+  width: 0;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 12px;
+  transition: width .3s linear ;
+} 
+div.checkbox{
+  display: flex;
+  align-items: center;
+}
+div.task.done span:before{
+  width: 100%;
+}
+button.trash{
+  background:none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+button.trash svg{
+  fill: #aaa;
+  height: 14px;
+}
+
+
+h1 ,h2{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.task input{
+  border:  2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
 }
